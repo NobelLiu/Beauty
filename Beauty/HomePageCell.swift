@@ -17,12 +17,13 @@ class HomePageCell: UICollectionViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imageViewWidth: NSLayoutConstraint!
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    var note = Note()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         insideView.layer.cornerRadius = 5
         shadowImageView.layer.cornerRadius = 5
-        shadowImageView.image = applyBlurEffect(image: imageView.image!)
     }
     
     func applyBlurEffect(image: UIImage) -> UIImage {
@@ -32,6 +33,16 @@ class HomePageCell: UICollectionViewCell {
         let resultImage = blurfilter?.value(forKey: "outputImage") as! CIImage
         let blurredImage = UIImage(ciImage: resultImage)
         return blurredImage
+    }
+    
+    func fillWith(note: Note) {
+        self.note = note
+        
+        titleLabel.text = note.title
+        contentLabel.text = note.content
+        imageView.image = UIImage(named: note.image!)
+        
+        shadowImageView.image = applyBlurEffect(image: imageView.image!)
     }
 
 }

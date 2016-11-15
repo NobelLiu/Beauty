@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -19,6 +20,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.register(UINib(nibName: "HomePageCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
         createGradientLayer()
+        let realm = try! Realm()
+        
+        for idx in 0...10 {
+            let note = Note()
+            note.image = "tmp1"
+            note.title = "小家伙第\(idx)次咬我头发"
+            note.content = "这是目前的第\(idx)篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事"
+            try! realm.write {
+                realm.add(note)
+            }
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -51,7 +63,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        let realm = try! Realm()
+        let notes = realm.objects(Note.self)
+        return notes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -63,7 +77,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let realm = try! Realm()
+        let notes = realm.objects(Note.self)
+        let note = notes[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HomePageCell
+        cell.fillWith(note: note)
         return cell
     }
 

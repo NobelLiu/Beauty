@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,7 +68,7 @@
                         <rect key="frame" x="70" y="33" width="224" height="301"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp" translatesAutoresizingMaskIntoConstraints="NO" id="GoS-Cd-bAH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp1" translatesAutoresizingMaskIntoConstraints="NO" id="GoS-Cd-bAH">
                         <rect key="frame" x="65" y="13" width="234" height="311"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="311" id="jVX-Id-CzC"/>
@@ -104,6 +103,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="tmp" width="234" height="311"/>
+        <image name="tmp1" width="234" height="311"/>
     </resources>
 </document>
