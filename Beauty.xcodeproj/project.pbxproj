@@ -19,6 +19,7 @@
 		7A9E33C11DDAF35000A69C78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9E33C01DDAF35000A69C78 /* CloudKit.framework */; };
 		7A9E33C31DDAF38000A69C78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9E33C21DDAF38000A69C78 /* MapKit.framework */; };
 		7A9E33C51DDAFC8800A69C78 /* NewNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E33C41DDAFC8800A69C78 /* NewNoteController.swift */; };
+		7A9E33CC1DDB194400A69C78 /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E33CB1DDB194400A69C78 /* Beauty.swift */; };
 		7C11238AA08228451468591A /* Pods_Beauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E893CD95CA81CB691FFC3B /* Pods_Beauty.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		7A9E33C01DDAF35000A69C78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7A9E33C21DDAF38000A69C78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A9E33C41DDAFC8800A69C78 /* NewNoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteController.swift; sourceTree = "<group>"; };
+		7A9E33CB1DDB194400A69C78 /* Beauty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
 		B7F882840C3FDBA203705943 /* Pods-Beauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beauty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beauty/Pods-Beauty.debug.xcconfig"; sourceTree = "<group>"; };
 		B8E893CD95CA81CB691FFC3B /* Pods_Beauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				7A18771A1DD83786006D3C6D /* Main.storyboard */,
 				7A1877281DD84151006D3C6D /* HomePageCell.swift */,
 				7A9E33BD1DDAF23500A69C78 /* Note.swift */,
+				7A9E33CB1DDB194400A69C78 /* Beauty.swift */,
 				7A1877291DD84151006D3C6D /* HomePageCell.xib */,
 				7A18771D1DD83786006D3C6D /* Assets.xcassets */,
 				7A18771F1DD83786006D3C6D /* LaunchScreen.storyboard */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A18772A1DD84151006D3C6D /* HomePageCell.swift in Sources */,
+				7A9E33CC1DDB194400A69C78 /* Beauty.swift in Sources */,
 				7A1877191DD83786006D3C6D /* ViewController.swift in Sources */,
 				7A1877171DD83786006D3C6D /* AppDelegate.swift in Sources */,
 				7A9E33C51DDAFC8800A69C78 /* NewNoteController.swift in Sources */,
