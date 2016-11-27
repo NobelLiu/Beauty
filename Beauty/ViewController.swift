@@ -58,7 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var frame = view.bounds
         frame.size.height /= 2
         gradientLayer.frame = frame
-        gradientLayer.colors = [UIColor(red:0.97, green:0.77, blue:0.77, alpha:1.00).cgColor, UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1).cgColor]
+        gradientLayer.colors = [Beauty.tintColor().cgColor, UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1).cgColor]
         view.layer.insertSublayer(gradientLayer, below: collectionView.layer)
     }
     

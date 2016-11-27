@@ -9,6 +9,9 @@
 import UIKit
 
 class Beauty: NSObject {
-    var shared = [String:String]()
+    
+    class func tintColor() -> UIColor {
+        return UIColor(red:0.97, green:0.77, blue:0.77, alpha:1.00)
+    }
     
 }

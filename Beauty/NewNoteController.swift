@@ -9,11 +9,13 @@
 import UIKit
 
 class NewNoteController: UIViewController {
-
+    
+    var gradientLayer: CAGradientLayer!
+    
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createGradientLayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +23,21 @@ class NewNoteController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func dismiss(_ sender: UIGestureRecognizer) {
+//        if sender.isKind(of: UITapGestureRecognizer()) {
+            self.dismiss(animated: true, completion: nil)
+//        } else {
+//            let pan = sender as! UIPanGestureRecognizer
+//        }
+    }
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        var frame = view.bounds
+        frame.size.height /= 2
+        gradientLayer.frame = frame
+        gradientLayer.colors = [Beauty.tintColor().cgColor, UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1).cgColor]
+        view.layer.insertSublayer(gradientLayer, below: imageView.layer)
     }
 
     /*

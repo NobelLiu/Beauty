@@ -15,6 +15,7 @@
 		7A18772A1DD84151006D3C6D /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1877281DD84151006D3C6D /* HomePageCell.swift */; };
 		7A18772B1DD84151006D3C6D /* HomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1877291DD84151006D3C6D /* HomePageCell.xib */; };
 		7A1877311DDA06ED006D3C6D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1877301DDA06ED006D3C6D /* icon.png */; };
+		7A1877331DDC8EFA006D3C6D /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1877321DDC8EFA006D3C6D /* LaunchScreenController.swift */; };
 		7A9E33BE1DDAF23500A69C78 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E33BD1DDAF23500A69C78 /* Note.swift */; };
 		7A9E33C11DDAF35000A69C78 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9E33C01DDAF35000A69C78 /* CloudKit.framework */; };
 		7A9E33C31DDAF38000A69C78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9E33C21DDAF38000A69C78 /* MapKit.framework */; };
@@ -35,6 +36,7 @@
 		7A1877281DD84151006D3C6D /* HomePageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
 		7A1877291DD84151006D3C6D /* HomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageCell.xib; sourceTree = "<group>"; };
 		7A1877301DDA06ED006D3C6D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		7A1877321DDC8EFA006D3C6D /* LaunchScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		7A9E33BD1DDAF23500A69C78 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7A9E33BF1DDAF34A00A69C78 /* Beauty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beauty.entitlements; sourceTree = "<group>"; };
 		7A9E33C01DDAF35000A69C78 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -107,6 +109,7 @@
 				7A1877281DD84151006D3C6D /* HomePageCell.swift */,
 				7A9E33BD1DDAF23500A69C78 /* Note.swift */,
 				7A9E33CB1DDB194400A69C78 /* Beauty.swift */,
+				7A1877321DDC8EFA006D3C6D /* LaunchScreenController.swift */,
 				7A1877291DD84151006D3C6D /* HomePageCell.xib */,
 				7A18771D1DD83786006D3C6D /* Assets.xcassets */,
 				7A18771F1DD83786006D3C6D /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 				7A9E33CC1DDB194400A69C78 /* Beauty.swift in Sources */,
 				7A1877191DD83786006D3C6D /* ViewController.swift in Sources */,
 				7A1877171DD83786006D3C6D /* AppDelegate.swift in Sources */,
+				7A1877331DDC8EFA006D3C6D /* LaunchScreenController.swift in Sources */,
 				7A9E33C51DDAFC8800A69C78 /* NewNoteController.swift in Sources */,
 				7A9E33BE1DDAF23500A69C78 /* Note.swift in Sources */,
 			);
