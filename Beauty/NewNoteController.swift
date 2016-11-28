@@ -37,7 +37,8 @@ class NewNoteController: UIViewController {
         frame.size.height /= 2
         gradientLayer.frame = frame
         gradientLayer.colors = [Beauty.tintColor().cgColor, UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1).cgColor]
-        view.layer.insertSublayer(gradientLayer, below: imageView.layer)
+//        view.layer.insertSublayer(gradientLayer, below: imageView.layer)
+        view.layer.addSublayer(gradientLayer)
     }
 
     /*

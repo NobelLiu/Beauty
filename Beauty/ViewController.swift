@@ -17,8 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.register(UINib(nibName: "HomePageCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: "cell")
         createGradientLayer()
         let realm = try! Realm()
         
@@ -80,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let realm = try! Realm()
         let notes = realm.objects(Note.self)
         let note = notes[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HomePageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
         cell.fillWith(note: note)
         return cell
     }

@@ -9,11 +9,13 @@
 import RealmSwift
 
 class Note: Object {
-    dynamic var title: String?
-    dynamic var content: String?
-    dynamic var time: String?
-    dynamic var image: String?
-    dynamic var reminder: String?
-    dynamic var weather: String?
-    dynamic var location: String?
+    dynamic var title = ""
+    dynamic var content = ""
+    dynamic var time = ""
+    dynamic var image = ""
+    dynamic var reminder = ""
+    dynamic var weather = ""
+    dynamic var location = ""
+    dynamic var imageWidth: Float = 0.0
+    dynamic var imageHeight: Float = 0.0
 }

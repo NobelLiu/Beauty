@@ -5,8 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,10 +80,7 @@
                                 <state key="normal" image="Add"/>
                                 <state key="highlighted" image="AddPressed"/>
                                 <connections>
-                                    <segue destination="BT4-Kc-d9e" kind="presentation" modalPresentationStyle="overCurrentContext" id="jF3-hV-Nj5">
-                                        <segue key="commit" inheritsFrom="parent" id="pDe-jt-lyJ"/>
-                                        <segue key="preview" inheritsFrom="commit" id="PiK-cg-YbU"/>
-                                    </segue>
+                                    <segue destination="BT4-Kc-d9e" kind="showDetail" action="showViewController:sender:" id="ibU-IC-3rx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8U-4c-pFT">
@@ -149,84 +144,12 @@
                     <view key="view" contentMode="scaleToFill" id="DYR-rD-1yR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITn-8K-6xh">
-                                <rect key="frame" x="16" y="92" width="344" height="176"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="344" id="Rvp-z6-hee"/>
-                                    <constraint firstAttribute="height" constant="176" id="Vnj-uh-rTq"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar" translatesAutoresizingMaskIntoConstraints="NO" id="nOn-dI-dl8">
-                                <rect key="frame" x="15" y="44" width="345" height="40"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0Xl-ol-qUi"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dou-Fq-5id" appends="YES" id="mIl-04-eWz"/>
-                                    <outletCollection property="gestureRecognizers" destination="E3S-UK-L8M" appends="YES" id="i8B-Fl-W2p"/>
-                                </connections>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lm9-Rx-Q8g">
-                                <rect key="frame" x="15" y="283" width="345" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="et0-jr-pTJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qHi-S0-RqS"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下滑关闭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-xJ-2NM">
-                                <rect key="frame" x="156.5" y="20" width="61.5" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brd-VQ-p0b">
-                                <rect key="frame" x="38" y="80" width="300" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Brd-VQ-p0b" secondAttribute="height" multiplier="3:2" id="FmE-6G-r1a"/>
-                                </constraints>
-                                <state key="normal" image="ChoosePhoto"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Brd-VQ-p0b" firstAttribute="centerX" secondItem="ITn-8K-6xh" secondAttribute="centerX" id="FAF-Jv-kAp"/>
-                            <constraint firstAttribute="trailing" secondItem="nOn-dI-dl8" secondAttribute="trailing" constant="15" id="G6c-Uj-9as"/>
-                            <constraint firstItem="Z4J-xJ-2NM" firstAttribute="centerX" secondItem="DYR-rD-1yR" secondAttribute="centerX" id="LH4-qT-69S"/>
-                            <constraint firstItem="ITn-8K-6xh" firstAttribute="centerX" secondItem="DYR-rD-1yR" secondAttribute="centerX" id="LHw-am-FhI"/>
-                            <constraint firstItem="nOn-dI-dl8" firstAttribute="top" secondItem="hyM-fq-ASE" secondAttribute="bottom" constant="44" id="P9P-Qb-kdd"/>
-                            <constraint firstItem="Z4J-xJ-2NM" firstAttribute="top" secondItem="hyM-fq-ASE" secondAttribute="bottom" constant="20" id="SpR-0A-OKE"/>
-                            <constraint firstItem="ITn-8K-6xh" firstAttribute="top" secondItem="nOn-dI-dl8" secondAttribute="bottom" constant="8" id="W15-rX-3Pl"/>
-                            <constraint firstAttribute="trailing" secondItem="Lm9-Rx-Q8g" secondAttribute="trailing" constant="15" id="XV8-Em-P50"/>
-                            <constraint firstItem="Brd-VQ-p0b" firstAttribute="centerY" secondItem="ITn-8K-6xh" secondAttribute="centerY" id="nBQ-Dq-0Wd"/>
-                            <constraint firstItem="nOn-dI-dl8" firstAttribute="leading" secondItem="DYR-rD-1yR" secondAttribute="leading" constant="15" id="o6p-GV-dve"/>
-                            <constraint firstItem="Lm9-Rx-Q8g" firstAttribute="leading" secondItem="DYR-rD-1yR" secondAttribute="leading" constant="15" id="uNk-mW-AK1"/>
-                            <constraint firstItem="Lm9-Rx-Q8g" firstAttribute="top" secondItem="ITn-8K-6xh" secondAttribute="bottom" constant="15" id="y7h-gG-CRK"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="imageView" destination="ITn-8K-6xh" id="g7W-D3-fiJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMZ-W0-XIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dou-Fq-5id">
-                    <connections>
-                        <action selector="dismiss:" destination="BT4-Kc-d9e" id="44e-eh-KD1"/>
-                        <outlet property="delegate" destination="BT4-Kc-d9e" id="MTN-mE-d6p"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="E3S-UK-L8M">
-                    <connections>
-                        <action selector="dismiss:" destination="BT4-Kc-d9e" id="hhT-Ew-5Qy"/>
-                        <outlet property="delegate" destination="BT4-Kc-d9e" id="hte-5s-rfx"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1021.6" y="138.98050974512745"/>
         </scene>
@@ -234,13 +157,8 @@
     <resources>
         <image name="Add" width="63" height="63"/>
         <image name="AddPressed" width="63" height="63"/>
-        <image name="Bar" width="336" height="30"/>
-        <image name="ChoosePhoto" width="300" height="200"/>
         <image name="TATA" width="256" height="256"/>
         <image name="ic_menu" width="24" height="24"/>
         <image name="ic_search" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="jF3-hV-Nj5"/>
-    </inferredMetricsTieBreakers>
 </document>

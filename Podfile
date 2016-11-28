@@ -8,6 +8,7 @@ def pods
     pod 'RealmSwift'
     pod 'Firebase/Core'
     pod 'Firebase/AdMob'
+    pod 'SnapKit'
 end
 
 target 'Beauty' do
