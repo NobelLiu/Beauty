@@ -20,12 +20,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.register(Cell.self, forCellWithReuseIdentifier: "cell")
         createGradientLayer()
         let realm = try! Realm()
-        
-        for idx in 0...10 {
+        for idx in 0...2 {
             let note = Note()
-            note.image = "tmp1"
+            note.image = "head"
             note.title = "小家伙第\(idx)次咬我头发"
-            note.content = "这是目前的第\(idx)篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事"
+            note.content = "这是目前的第\(idx)篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事."
+            note.imageWidth = 234
+            note.imageHeight = 311
             try! realm.write {
                 realm.add(note)
             }
@@ -88,7 +89,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

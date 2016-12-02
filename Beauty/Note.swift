@@ -16,6 +16,6 @@ class Note: Object {
     dynamic var reminder = ""
     dynamic var weather = ""
     dynamic var location = ""
-    dynamic var imageWidth: Float = 0.0
-    dynamic var imageHeight: Float = 0.0
+    dynamic var imageWidth: Float = 0.1
+    dynamic var imageHeight: Float = 0.1
 }
