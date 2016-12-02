@@ -25,6 +25,7 @@ class Cell: UICollectionViewCell {
 //        super.init(frame: CGRect.zero)
 //    }
     // 后台线程处理所有model的blurimage model 添加blurimage key
+    //http://stackoverflow.com/questions/34964043/gaussian-blur-on-full-screen
     func applyBlurEffect(image: UIImage) -> UIImage {
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 10, y: 10, width: image.size.width, height: image.size.height)
