@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "选择图片"; ObjectID = "EDB-fO-NGF"; */
+"EDB-fO-NGF.normalTitle" = "选择图片";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "NU3-of-vYr"; */
+"NU3-of-vYr.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UISegmentedControl"; cjl-vt-ls6.segmentTitles[0] = "单页"; ObjectID = "cjl-vt-ls6"; */
+"cjl-vt-ls6.segmentTitles[0]" = "单页";
+
+/* Class = "UISegmentedControl"; cjl-vt-ls6.segmentTitles[1] = "列表"; ObjectID = "cjl-vt-ls6"; */
+"cjl-vt-ls6.segmentTitles[1]" = "列表";
+
+/* Class = "UINavigationItem"; title = "新增"; ObjectID = "g0X-S8-oed"; */
+"g0X-S8-oed.title" = "新增";
+
+/* Class = "UITextField"; placeholder = "标题"; ObjectID = "vKN-4a-rjq"; */
+"vKN-4a-rjq.placeholder" = "标题";

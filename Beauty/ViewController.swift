@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate {
 
     var gradientLayer: CAGradientLayer!
     
@@ -17,12 +17,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
         collectionView.register(Cell.self, forCellWithReuseIdentifier: "cell")
         createGradientLayer()
         let realm = try! Realm()
         for idx in 0...2 {
             let note = Note()
-            note.image = "head"
+            note.image = "tmp1"
             note.title = "小家伙第\(idx)次咬我头发"
             note.content = "这是目前的第\(idx)篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事篇记事."
             note.imageWidth = 234
@@ -33,9 +34,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
+    
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -58,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var frame = view.bounds
         frame.size.height /= 2
         gradientLayer.frame = frame
-        gradientLayer.colors = [Beauty.tintColor().cgColor, UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1).cgColor]
+        gradientLayer.colors = [Beauty.tintColor().cgColor, UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1).cgColor]
         view.layer.insertSublayer(gradientLayer, below: collectionView.layer)
     }
     
@@ -88,6 +93,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PingTransition()
     }
 
 }

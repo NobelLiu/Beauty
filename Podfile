@@ -9,6 +9,7 @@ def pods
     pod 'Firebase/Core'
     pod 'Firebase/AdMob'
     pod 'SnapKit'
+    pod 'ImagePicker'
 end
 
 target 'Beauty' do
